@@ -46,6 +46,14 @@ python run_vehicle_graph.py --input data/processed/processed_data.csv --output r
 python run_vehicle_graph.py --input data/processed/processed_data.csv --output results/vehicle_graph.html --interactive --layout kamada_kawai
 ```
 
+## Data Processing
+1. Place your raw `vehicles.csv` file in the `data/` directory
+2. The first time you run the visualization, it will automatically:
+   - Process the raw data
+   - Create a `processed_data.csv` file
+   - Generate the visualization
+3. Subsequent runs will use the processed data for faster loading
+
 ## Dependencies
 - Python 3.7+
 - pandas
