@@ -1,0 +1,84 @@
+# Vehicle Knowledge Graph Visualization
+
+Visualize relationships between vehicles, manufacturers, and states using an interactive knowledge graph.
+
+## Project Structure
+- `src/`: Source code
+  - `knowledge_graph_optimized.py`: Core graph implementation
+  - `visualize_graph.py`: Visualization utilities
+  - `__init__.py`: Package initialization
+- `data/`: Input datasets (add your data here)
+  - `processed/`: Processed data files (excluded from version control)
+- `results/`: Generated visualizations (excluded from version control)
+- `run_vehicle_graph.py`: Main script to run visualizations
+- `setup.py`: Package configuration
+
+## Setup
+1. Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   .\venv\Scripts\activate  # Windows
+   # OR
+   source venv/bin/activate  # Mac/Linux
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Usage
+Run the visualization with default settings:
+```bash
+python run_vehicle_graph.py --input data/processed/processed_data.csv --output results/vehicle_graph.png
+```
+
+### Command Line Arguments
+- `--input`: Path to input CSV file (required)
+- `--output`: Output file path (required)
+- `--max-nodes`: Maximum nodes to display (default: 100)
+- `--max-edges`: Maximum edges to display (default: 200)
+- `--layout`: Layout algorithm (spring, circular, kamada_kawai, random, fruchterman_reingold)
+- `--interactive`: Generate interactive HTML output
+
+### Example: Interactive Visualization
+```bash
+python run_vehicle_graph.py --input data/processed/processed_data.csv --output results/vehicle_graph.html --interactive --layout kamada_kawai
+```
+
+## Dependencies
+- Python 3.7+
+- pandas
+- networkx
+- matplotlib
+- pyvis (for interactive visualizations)
+
+## Output
+Visualizations are saved in the `results/` directory:
+- `.png` for static images
+- `.html` for interactive visualizations
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+## Project Components
+1. Data Processing
+2. Knowledge Graph Creation
+3. Pattern Recognition
+4. Insight Generation
+5. Visualization
+
+## Getting Started
+- Start by placing your dataset in the `data/` directory
+- Run the data processing pipeline
+- Generate knowledge representations
+- Extract insights from the processed data
+
+## Contributing
+Feel free to contribute to this project by:
+1. Adding new data processing techniques
+2. Implementing additional knowledge representation methods
+3. Enhancing visualization capabilities
+4. Adding new insight generation algorithms
